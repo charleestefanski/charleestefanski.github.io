@@ -1,0 +1,20 @@
+li{
+    text-decoration: none;
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFFF00;
+}
+
+li:hover{
+    text-transform: uppercase;
+}
+
+.current{
+    text-transform: uppercase;
+    color: #ADD8E6;
+}
+
+.mainHeader{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
