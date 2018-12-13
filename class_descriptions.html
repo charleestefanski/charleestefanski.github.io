@@ -21,6 +21,21 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:600" rel="stylesheet">
     <link rel="stylesheet" type = "text/css" href = "css/defaultStyle.css">
     <link rel="stylesheet" type = "text/css" href = "css/descriptionsStyle.css">
+    
+    <link rel="stylesheet" type = "text/css" href="lightbox/css/lightbox.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).resize(function() {
+                if($(window).width() >= 900) {
+                    $('p').hide();
+                } else {
+                    $('p').show();
+                }
+            }).resize();
+        });
+    </script>
 </head>
 
 <body id="page-top">
@@ -45,28 +60,49 @@
     <header>
     <h1 class = "pageTitle"> Class Descriptions </h1>
     </header>
-
-    <div class = 'grid-container'>
-        <h3 class = 'd1Title'>Hot Vinyasa</h3>
-        <h3 class = 'd2title'>Slow Burn</h3>
-        <h3 class = 'd3title'>Yin</h3>
-        <h3 class = 'd4title'>Follow the Yogi (Ashtanga)</h3>
-        <h3 class = 'd5title'>Yinyasa</h3>
-        <p class = 'd1'> This is a high-energy, high-intensity class that is paired with fist-pumping, booty shaking music. The room is heated, and sweat will start to pour! Get your heart racing with a mixture of dynamic and static movements. </p>
-        <img src = "./images/upwardDog.jpg" alt = "Person in upward dog pose" class='image1'>
-
-        <p class = 'd2'>This class is all about feelz. We will take you through some slower, more grounded movements. The room will still be heated, but the intensity of the class comes from you, not the heater. We challenge all students in this class to close their eyes or even blindfold themselves in order to truly experience every sensation. </p>
-        <img src = "./images/childsPose.jpg" alt = "Person in chil's pose" class = 'image2'>
-        
-        <p class = 'd3'>This class takes it all the way down. It is filled with long-holding poses that are meant to unravel you. You will learn how to slow your breath down, and how to breath into every sensation that rises to the surface. Close your eyes, take a breath, and settle in. </p>
-        <img src = "./images/pigeonPose.jpg" alt = "Girl in pigeon pose" class = 'image3'>
-        
-        <p class = 'd4'>Move with one of our baller teachers as they take you through their daily Ashtanga practice! The movements will be more regimented and guided, but there will still be some personal twists thrown in there to keep you on your toes! This class is perfect for beginners who have never practiced before, for pros who want to strengthen their yoga roots, and for anyone in between!</p>
-        <img src = "./images/seatedPose.jpg" alt = "Girl in seated pose" class = 'image4'>
-        
-        <p class= 'd5'>A perfect blend of vinyasa and yin, this class takes you through dynamic flows and long-holding postures. The fast-paced movements combined with the long-holding postures will leave you feeling like jelly in the best way possible.</p>
-        <img src = "./images/lessIsMore.jpg" alt = "Less is more quote" class = 'image5'>
+<main>
+    <div class = 'gallery container'>
+        <div class = 'd1'>
+            <h3 class = 'd1Title'>Hot Vinyasa</h3>
+            <p class = 'd1desc'> This is a high-energy, high-intensity class that is paired with fist-pumping, booty shaking music. The room is heated, and sweat will start to pour! Get your heart racing with a mixture of dynamic and static movements. </p>
+            <a href = "./images/upwardDog.jpg" data-lightbox="image" data-tile="D1"><img src = "./images/upwardDog.jpg" alt = "Person in upward dog pose" class = 'd1img'></a>
+        </div>
+        <div class = 'd2'>
+            <h3 class = 'd2title'>Slow Burn</h3>
+            <p class = 'd2desc'>This class is all about feelz. We will take you through some slower, more grounded movements. The room will still be heated, but the intensity of the class comes from you, not the heater. We challenge all students in this class to close their eyes or even blindfold themselves in order to truly experience every sensation. </p>
+            <a href = "./images/childsPose.jpg" data-lightbox="image" data-tile="D2"><img src = "./images/childsPose.jpg" alt = "Person in chil's pose" class = 'd2img'></a>
+        </div>
+        <div class = 'd3'>
+            <h3 class = 'd3title'>Yin</h3>
+            <p class = 'd3desc'>This class takes it all the way down. It is filled with long-holding poses that are meant to unravel you. You will learn how to slow your breath down, and how to breath into every sensation that rises to the surface. Close your eyes, take a breath, and settle in. </p>
+            <a href = "./images/pigeonPose.jpg" data-lightbox="image" data-tile="D3"><img src = "./images/pigeonPose.jpg" alt = "Girl in pigeon pose" class = "d3img"></a>
+        </div>
+        <div class = 'd4'>
+            <h3 class = 'd4title'>Follow the Yogi (Ashtanga)</h3>
+            <p class = 'd4desc'>Move with one of our baller teachers as they take you through their daily Ashtanga practice! The movements will be more regimented and guided, but there will still be some personal twists thrown in there to keep you on your toes! This class is perfect for beginners who have never practiced before, for pros who want to strengthen their yoga roots, and for anyone in between!</p>
+            <a href = "./images/seatedPose.jpg" data-lightbox="image" data-tile="D4"><img src = "./images/seatedPose.jpg" alt = "Girl in seated pose" class = "d4img"></a>
+        </div>
+        <div class = 'd5'>
+            <h3 class = 'd5title'>Yinyasa</h3>
+            <p class= 'd5desc'>A perfect blend of vinyasa and yin, this class takes you through dynamic flows and long-holding postures. The fast-paced movements combined with the long-holding postures will leave you feeling like jelly in the best way possible.</p>
+            <a href = "./images/lessIsMore.jpg" data-lightbox="image" data-tile="D4"><img src = "./images/lessIsMore.jpg" alt = "Less is more quote" class = 'd5img'></a>
+        </div>
     </div>
 
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/js/grayscale.min.js"></script>
+
+    <script src="lightbox/js/lightbox.js"></script>
+    <script src="lightbox/js/mixitup.js"></script>
+    <script>
+		var containerEL = document.querySelector('.container');
+		var mixer = mixitup(containerEL)
+    </script>
+</main>
 </body>
 </html>
