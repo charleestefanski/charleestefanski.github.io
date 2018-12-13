@@ -91,9 +91,9 @@ li:visited{
 
 .scheduleImg{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+    margin-right: 10%;
+    margin-left: 10%;
+    max-width: 100%;
 }
 
 .scheduleBody {
