@@ -13,9 +13,9 @@ li{
 li a{
     text-decoration: none;
     text-align: center;
-    padding: 14px 16px;
-    color: rgb(152, 172, 179);
+    color: rgb(185, 205, 212);
     font-size: 20px;
+    font-weight: semi-bold;
 }
 
 li:hover{
@@ -38,18 +38,19 @@ li:visited{
     font-weight: semi-bold;
     font-size: 100px;
     color: rgb(19, 100, 69);
-    margin: 0 0 10px 0;
-    padding: 0;
+    letter-spacing: .5rem;
 }
 
-.pageHeader {
+.pageTitle {
     font-family: 'Crimson Text', serif;
     text-align: center;
     font-weight: semi-bold;
-    color: rgb(19, 100, 69);
+    color:rgb(19, 100, 69);
+    letter-spacing: 1px;
     font-size: 60px;
-    padding: 0;
-    margin: 0;
+    margin-top: 80px;
+    text-align: center;
+
 }
 
 .indexBody {
@@ -59,7 +60,7 @@ li:visited{
 .second-header {
     color: #FFFFFF;
     font-family: "Courier New", Arial;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -68,7 +69,7 @@ li:visited{
 .description {
     color: #FFFFFF;
     font-family: "Courier New", Arial;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
@@ -81,9 +82,29 @@ li:visited{
     text-align: center;
 }
 
-img{
-    display: flex;
-    width: default;
-    position: relative;
-    margin: auto;
+.collageImg {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%;
+}
+
+.scheduleImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.scheduleBody {
+    background-color: #043C4E
+}
+
+#scheduleText {
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Courier New", Arial;
+    font-size: 15px;
 }
