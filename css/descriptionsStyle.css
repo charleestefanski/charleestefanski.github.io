@@ -62,7 +62,7 @@ img {
     color: rgb(19, 100, 69);
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:901px) {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -73,7 +73,7 @@ img {
     }
 }
 
-@media screen and (max-width: 900px) and (min-width:600px) {
+@media screen and (max-width: 900px) and (min-width:601px) {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -125,5 +125,17 @@ img {
         background-color: #ffffff;
         display: none;
         overflow: hidden;
+    }
+
+    .accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+    }
+      
+    .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
     }
 }

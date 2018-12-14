@@ -31,32 +31,6 @@
     <link rel="stylesheet" type = "text/css" href = "css/defaultStyle.css">
     <link rel="stylesheet" type = "text/css" href = "css/descriptionsStyle.css">
     
-    <script>
-        $(document).ready(function() {
-            $(window).resize(function() {
-                if($(window).width() < 600) {
-                     $('a').removeAttr('data-fancybox');
-                }
-            }).resize();
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $(window).resize(function() {
-                if($(window).width() >= 600) {
-                    $('button').hide();
-                    $('p').hide();
-                    $('img').show();
-                    $('h3').show();
-                }
-                else {
-                    $('button').show();
-                    $('img').hide();
-                    $('h3').hide();
-                }
-            }).resize();
-        });
-    </script>
 </head>
 
 <body id="page-top">
@@ -134,7 +108,21 @@
     <script>
         $(document).ready(function() {
             $(window).resize(function() {
-                if($(window).width() >= 600) {
+                if($(window).width() <= 600) {
+                    $('button').show();
+                    $('img').hide();
+                    $('h3').hide();
+                    $('a').removeAttr('data-fancybox');
+                    $('.accordion').click(function() {
+                        $(this).parent(['div']).find('.panel').toggle();
+                        $(this).toggleClass("active");
+                    });
+                }
+                if($(window).width() > 600) {
+                    $('button').hide();
+                    $('p').hide();
+                    $('img').show();
+                    $('h3').show();
                     $('[data-fancybox="gallery"]').fancybox({
                         caption : function( instance, item ) {
                             return $(this).parent(['div']).find('h3').text()+': ' + $(this).parent(['div']).find('p').text()
@@ -144,15 +132,6 @@
             }).resize();
         });
     </script>
-    <script>
-            $(document).ready(function() {
-                if($(window).width() < 600) {
-                    $('.accordion').click(function() {
-                        $(this).parent(['div']).find('.panel').toggle();
-                    });
-                }
-        });
-        </script>
 
 </main>
 </body>
