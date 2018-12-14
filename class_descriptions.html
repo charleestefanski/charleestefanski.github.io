@@ -10,31 +10,61 @@
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
             
-    <!-- Custom fonts for this template -->
+    <!-- Custom fonts for grayscale template -->
     <link href="/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
             
-    <!-- Custom styles for this template -->
+    <!-- Custom styles from Grayscale template -->
     <link href="/css/grayscale.min.css" rel="stylesheet">
-                
+    
+    <!--My google font-->
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:600" rel="stylesheet">
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.5/dist/jquery.fancybox.min.css" />
+
+    <!--My style sheets-->
     <link rel="stylesheet" type = "text/css" href = "css/defaultStyle.css">
     <link rel="stylesheet" type = "text/css" href = "css/descriptionsStyle.css">
     
-    <link rel="stylesheet" type = "text/css" href="lightbox/css/lightbox.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
             $(window).resize(function() {
-                if($(window).width() >= 900) {
-                    $('p').hide();
-                } else {
-                    $('p').show();
+                if($(window).width() < 600) {
+                     $('a').removeAttr('data-fancybox');
                 }
             }).resize();
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(window).resize(function() {
+                if($(window).width() >= 600) {
+                    $('button').hide();
+                    $('p').hide();
+                    $('img').show();
+                    $('h3').show();
+                }
+                else {
+                    $('button').show();
+                    $('img').hide();
+                    $('h3').hide();
+                }
+            }).resize();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if($(window).width() < 600) {
+                $('.accordion').click(function() {
+                    $(this).parent(['div']).find('.panel').toggle();
+                });
+            }
+    });
     </script>
 </head>
 
@@ -61,33 +91,43 @@
     <h1 class = "pageTitle"> Class Descriptions </h1>
     </header>
 <main>
-    <div class = 'gallery container'>
-        <div class = 'd1'>
-            <h3 class = 'd1Title'>Hot Vinyasa</h3>
-            <p class = 'd1desc'> This is a high-energy, high-intensity class that is paired with fist-pumping, booty shaking music. The room is heated, and sweat will start to pour! Get your heart racing with a mixture of dynamic and static movements. </p>
-            <a href = "./images/upwardDog.jpg" data-lightbox="image" data-tile="D1"><img src = "./images/upwardDog.jpg" alt = "Person in upward dog pose" class = 'd1img'></a>
+    <div class = "grid-container">
+        <div class = 'desc'>
+            <button class="accordion">Hot Vinyasa</button>
+            <h3 class = 'title'>Hot Vinyasa</h3>
+            <a data-fancybox='gallery' title = 'hi' href = "./images/mountainPose.jpg"><img src = "./images/mountainPose.jpg" alt = "Person standing in mountain pose" class = 'd1img'></a>
+            <p class = 'panel d1desc'> This is a high-energy, high-intensity class that is paired with fist-pumping, booty shaking music. The room is heated, and sweat will start to pour! Get your heart racing with a mixture of dynamic and static movements. </p>
         </div>
-        <div class = 'd2'>
-            <h3 class = 'd2title'>Slow Burn</h3>
-            <p class = 'd2desc'>This class is all about feelz. We will take you through some slower, more grounded movements. The room will still be heated, but the intensity of the class comes from you, not the heater. We challenge all students in this class to close their eyes or even blindfold themselves in order to truly experience every sensation. </p>
-            <a href = "./images/childsPose.jpg" data-lightbox="image" data-tile="D2"><img src = "./images/childsPose.jpg" alt = "Person in chil's pose" class = 'd2img'></a>
+        <div class = 'desc'>
+            <button class="accordion">Slow Burn</button>
+            <h3 class = 'title'>Slow Burn</h3>
+            <a data-fancybox='gallery' href = "./images/pigeonPose2.jpg"><img src = "./images/pigeonPose2.jpg" alt = "Person in a modified pigeon pose" class = 'd2img'></a>
+            <p class = 'panel d2desc'>This class is all about feelz. We will take you through some slower, more grounded movements. The room will still be heated, but the intensity of the class comes from you, not the heater. We challenge all students in this class to close their eyes or even blindfold themselves in order to truly experience every sensation. </p>
         </div>
-        <div class = 'd3'>
-            <h3 class = 'd3title'>Yin</h3>
-            <p class = 'd3desc'>This class takes it all the way down. It is filled with long-holding poses that are meant to unravel you. You will learn how to slow your breath down, and how to breath into every sensation that rises to the surface. Close your eyes, take a breath, and settle in. </p>
-            <a href = "./images/pigeonPose.jpg" data-lightbox="image" data-tile="D3"><img src = "./images/pigeonPose.jpg" alt = "Girl in pigeon pose" class = "d3img"></a>
+        <div class = 'desc'>
+            <button class="accordion">Yin</button>
+            <h3 class = 'title'>Yin</h3>
+            <a data-fancybox='gallery' href = "./images/pigeonPose.jpg"><img src = "./images/pigeonPose.jpg" alt = "Girl in pigeon pose" class = "d3img"></a>
+            <p class = 'panel d3desc'>This class takes it all the way down. It is filled with long-holding poses that are meant to unravel you. You will learn how to slow your breath down, and how to breath into every sensation that rises to the surface. Close your eyes, take a breath, and settle in. </p>
         </div>
-        <div class = 'd4'>
-            <h3 class = 'd4title'>Follow the Yogi (Ashtanga)</h3>
-            <p class = 'd4desc'>Move with one of our baller teachers as they take you through their daily Ashtanga practice! The movements will be more regimented and guided, but there will still be some personal twists thrown in there to keep you on your toes! This class is perfect for beginners who have never practiced before, for pros who want to strengthen their yoga roots, and for anyone in between!</p>
-            <a href = "./images/seatedPose.jpg" data-lightbox="image" data-tile="D4"><img src = "./images/seatedPose.jpg" alt = "Girl in seated pose" class = "d4img"></a>
+        <div class = 'desc'>
+            <button class="accordion">Follow the Yogi (Ashtanga)</button>
+            <h3 class = 'title'>Follow the Yogi (Ashtanga)</h3>
+            <a data-fancybox='gallery' href = "./images/seatedPose.jpg"><img src = "./images/seatedPose.jpg" alt = "Girl in seated pose" class = "d4img"></a>
+            <p class = 'panel d4desc'>Move with one of our baller teachers as they take you through their daily Ashtanga practice! The movements will be more regimented and guided, but there will still be some personal twists thrown in there to keep you on your toes! This class is perfect for beginners who have never practiced before, for pros who want to strengthen their yoga roots, and for anyone in between!</p>
         </div>
-        <div class = 'd5'>
-            <h3 class = 'd5title'>Yinyasa</h3>
-            <p class= 'd5desc'>A perfect blend of vinyasa and yin, this class takes you through dynamic flows and long-holding postures. The fast-paced movements combined with the long-holding postures will leave you feeling like jelly in the best way possible.</p>
-            <a href = "./images/lessIsMore.jpg" data-lightbox="image" data-tile="D4"><img src = "./images/lessIsMore.jpg" alt = "Less is more quote" class = 'd5img'></a>
+        <div class = 'desc'>
+            <button class="accordion">Yinyasa</button>
+            <h3 class = 'title'>Yinyasa</h3>
+            <a data-fancybox='gallery' href = "./images/plankPose.jpg"><img src = "./images/plankPose.jpg" alt = "person in plank" class = 'd5img'></a>
+            <p class= 'panel d5desc'>A perfect blend of vinyasa and yin, this class takes you through dynamic flows and long-holding postures. The fast-paced movements combined with the long-holding postures will leave you feeling like jelly in the best way possible.</p>
         </div>
     </div>
+    <footer class="descriptionsFooter small text-center">
+        <div class="container">
+            Charlee Stefanski - SI 339 2018
+        </div>
+    </footer>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
     
@@ -97,12 +137,23 @@
     <!-- Custom scripts for this template -->
     <script src="/js/grayscale.min.js"></script>
 
-    <script src="lightbox/js/lightbox.js"></script>
-    <script src="lightbox/js/mixitup.js"></script>
+    <!--Fancybox jQuery-->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.5/dist/jquery.fancybox.min.js"></script>
     <script>
-		var containerEL = document.querySelector('.container');
-		var mixer = mixitup(containerEL)
+        $(document).ready(function() {
+            $(window).resize(function() {
+                if($(window).width() >= 600) {
+                    $('[data-fancybox="gallery"]').fancybox({
+                        caption : function( instance, item ) {
+                            return $(this).parent(['div']).find('h3').text()+': ' + $(this).parent(['div']).find('p').text()
+                        }
+                    }); 
+                }
+            }).resize();
+        });
     </script>
+
 </main>
 </body>
 </html>

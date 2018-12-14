@@ -1,5 +1,16 @@
 body {
-    background-color: #043C4E;
+    background-color: rgb(255, 230, 255);
+}
+
+@media screen and (min-width: 1200px) {
+    #mainNav .nav-link {
+        color: rgb(19, 100, 69);
+    }
+    
+    #mainNav .navbar-brand {
+        color:rgb(19, 100, 69);
+        padding: 0;
+    }
 }
 
 h3 {
@@ -9,18 +20,7 @@ h3 {
 
 p {
     color: #ffffff;
-}
-
-.d1img {
-    text-align:center;
-    color: rgb(19, 100, 69);
-}
-
-.d1Title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+    font-size: 5rem;
 }
 
 .gallery {
@@ -40,7 +40,52 @@ img {
     border: 2px solid black;
 }
 
-@media screen and (max-width: 900px) {
+.desc {
+    position: relative;
+    text-align: center;
+}
+
+.title {
+    color: rgb(19, 100, 69);
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.fancybox-caption {
+    font-size: 15pt;
+}
+
+.descriptionsFooter {
+    color: rgb(19, 100, 69);
+}
+
+@media screen and (min-width:900px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width:600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
     .grid-container{
         display: grid;
         grid-template-columns: 1fr;
@@ -48,20 +93,37 @@ img {
         grid-row-gap: 20px;
         padding: 20px;
     }
+
     .grid-container img{
         width: 100%;
     }
-}
-
-/*1@media screen and (min-width: 900px){
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+    
+    p {
+        font-size: 1rem;
+        padding: 10px;
+        color: rgb(19, 100, 69);
     }
 
-}
-*/
+    .title {
+        position: absolute;
+        top: 20%;
+    }
 
+    .accordion {
+        color: rgb(19, 100, 69);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+    }
+
+    .panel {
+        padding: 18px;
+        background-color: #ffffff;
+        display: none;
+        overflow: hidden;
+    }
+}

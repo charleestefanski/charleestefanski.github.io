@@ -1,0 +1,14 @@
+@media (min-width: 1200px) {
+    #mainNav .nav-link {
+        color: rgb(19, 100, 69);
+    }
+    
+    #mainNav .navbar-brand {
+        color:rgb(19, 100, 69);
+        padding: 0;
+    }
+}
+
+footer{
+    color: rgb(19, 100, 69);
+}

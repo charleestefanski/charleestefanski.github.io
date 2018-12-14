@@ -8,9 +8,6 @@ ul{
 
 li{
     display: inline;
-}
-
-li a{
     text-decoration: none;
     text-align: center;
     color: rgb(185, 205, 212);
@@ -24,12 +21,12 @@ li:hover{
 
 li:visited{
     text-decoration: none;
-    color: rgb(152, 172, 179);
+    color: rgb(185, 205, 212);
 }
 
 .current{
     text-transform: uppercase;
-    color: rgb(152, 172, 179);
+    color: rgb(185, 205, 212);
 }
 
 .mainHeader{
@@ -100,7 +97,7 @@ li:visited{
 }
 
 .scheduleBody {
-    background-color: #043C4E
+    background-color: #043C4E;
 }
 
 .scheduleText {
@@ -112,6 +109,14 @@ li:visited{
     font-size: 15px;
 }
 
+.contactBody {
+    background-color:rgb(230, 243, 255);
+}
+
 footer {
     padding: 2rem;
+}
+
+.scheduleFooter{
+    color: #FFFFFF;
 }
