@@ -57,15 +57,6 @@
             }).resize();
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            if($(window).width() < 600) {
-                $('.accordion').click(function() {
-                    $(this).parent(['div']).find('.panel').toggle();
-                });
-            }
-    });
-    </script>
 </head>
 
 <body id="page-top">
@@ -153,6 +144,15 @@
             }).resize();
         });
     </script>
+    <script>
+            $(document).ready(function() {
+                if($(window).width() < 600) {
+                    $('.accordion').click(function() {
+                        $(this).parent(['div']).find('.panel').toggle();
+                    });
+                }
+        });
+        </script>
 
 </main>
 </body>
