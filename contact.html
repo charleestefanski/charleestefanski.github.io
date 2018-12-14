@@ -45,17 +45,20 @@
         <h1 class = "pageTitle">Contact Us</h1>
     </header>
 
-    <h2>Phone number: (248) 895-9408<br/>
-        Email: nakdyoga@gmail.com
-    </h2>
-    <p> We host all of our classes at Openfloor </p>
-    <p>Openfloor Studio<br/>
-        213 S State St, Suite 2<br/>
-        Ann Arbor, MI 48104
-    </p>
-    <i class="fa fa-instagram" style="font-size:60px;color:#ff00ff;"></i> 
-    <img src = "./images/groupOfYogis.jpg" alt = "Group of people doing yoga">
-    <img src = "./images/daisy.jpg" alt = "Teacher, Daisy, sitting in yoga studio">
+    <div class = "contact">
+        <img id="daisyImg" src = "./images/daisy.jpg" alt = "Yoga teacher Daisy">
+        <div class = "contact-text">
+            <p>Phone number: (248) 895-9408<br/>
+                Email: nakdyoga@gmail.com
+            </p>
+            <p>We hold all of our classes at <a href = https://www.openfloorstudio.com alt = "link to Openfloor website">Openfloor.</a></p>
+            <p>Openfloor Studio<br/>
+                213 S State St, Suite 2<br/>
+                Ann Arbor, MI 48104
+            </p>
+        </div>
+        <i class="fa fa-instagram" style="font-size:60px;color:#ff00ff;"></i> 
+    </div>
     
     <footer class="small text-center">
         <div>
@@ -71,5 +74,21 @@
 
     <!-- Custom scripts for this template -->
     <script src="/js/grayscale.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            if ($(window).width() < 1100) {
+                $('#daisyImg').hide();
+            }
+            $(window).resize(function () {
+                if($(window).width() <= 1100) {
+                    $('#daisyImg').hide();
+                }
+                if($(window).width() > 1100) {
+                    $('#daisyImg').show();
+                }
+            }).resize;
+        });
+    </script>
 </body>
 </html>
