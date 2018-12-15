@@ -9,18 +9,34 @@
     }
 }
 
-.instagram {
-    margin: auto;
-    text-align: center;
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-.fa-instagram {
-    font-size: 60px;
+.instagram {
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.facebook {
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.location {
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.icon {
+    font-size: 40pt;
     color: rgb(19, 100, 69);
     padding: 10px;
 }
 
-.instagramText {
+.iconText {
     font-family: "Courier New", Arial;
     font-size: 1.1rem;
     color: rgb(19, 100, 69);
@@ -46,8 +62,12 @@ footer{
         margin-bottom: 10%;
     }
 
-    .instagram {
+    .flex-container {
         margin-top: 40%;
+    }
+
+    .icon {
+        font-size: 30pt;
     }
 }
 
