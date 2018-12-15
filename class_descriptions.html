@@ -30,6 +30,34 @@
     <!--My style sheets-->
     <link rel="stylesheet" type = "text/css" href = "css/defaultStyle.css">
     <link rel="stylesheet" type = "text/css" href = "css/descriptionsStyle.css">
+    <script>
+        $(document).ready(function() {
+            $(window).resize(function() {
+                if($(window).width() <= 600) {
+                    $('button').show();
+                    $('img').hide();
+                    $('img').addAttr
+                    $('h2').hide();
+                    $('a').removeAttr('data-fancybox');
+                    $('.accordion').click(function() {
+                        $(this).parent(['div']).find('.panel').toggle();
+                        $(this).toggleClass("active");
+                    });
+                }
+                if($(window).width() > 600) {
+                    $('.accordion').hide();
+                    $('p').hide();
+                    $('img').show();
+                    $('h2').show();
+                    $('[data-fancybox="gallery"]').fancybox({
+                        caption : function( instance, item ) {
+                            return $(this).parent(['div']).find('h2').text()+': ' + $(this).parent(['div']).find('p').text()
+                        }
+                    }); 
+                }
+            }).resize();
+        });
+    </script>
     
 </head>
 
@@ -109,33 +137,6 @@
     <!--Fancybox jQuery-->
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.5/dist/jquery.fancybox.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(window).resize(function() {
-                if($(window).width() <= 600) {
-                    $('button').show();
-                    $('img').hide();
-                    $('img').addAttr
-                    $('h2').hide();
-                    $('a').removeAttr('data-fancybox');
-                    $('.accordion').click(function() {
-                        $(this).parent(['div']).find('.panel').toggle();
-                        $(this).toggleClass("active");
-                    });
-                }
-                if($(window).width() > 600) {
-                    $('.accordion').hide();
-                    $('p').hide();
-                    $('img').show();
-                    $('h2').show();
-                    $('[data-fancybox="gallery"]').fancybox({
-                        caption : function( instance, item ) {
-                            return $(this).parent(['div']).find('h2').text()+': ' + $(this).parent(['div']).find('p').text()
-                        }
-                    }); 
-                }
-            }).resize();
-        });
-    </script>
+    
 </body>
 </html>
