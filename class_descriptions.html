@@ -34,6 +34,8 @@
 </head>
 
 <body id="page-top">
+    <div id="skip"><a href="#maincontent">Skip to main content</a></div>
+
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
@@ -52,42 +54,44 @@
         </div>
     </nav>
 
+    <main id="maincontent">
     <header>
     <h1 class = "pageTitle"> Class Descriptions </h1>
     </header>
-<main>
+
     <div class = "grid-container">
         <div class = 'desc'>
+            <h2 class = 'title'>Hot Vinyasa</h2>
             <button class="accordion">Hot Vinyasa</button>
-            <h3 class = 'title'>Hot Vinyasa</h3>
-            <a data-fancybox='gallery' title = 'hi' href = "./images/mountainPose.jpg"><img src = "./images/mountainPose.jpg" alt = "Person standing in mountain pose" class = 'd1img'></a>
+            <a data-fancybox='gallery' href = "./images/mountainPose.jpg" aria-label="Person standing in mountain pose"><img src = "./images/mountainPose.jpg" alt = "Person standing in mountain pose" class = 'd1img'></a>
             <p class = 'panel d1desc'> This is a high-energy, high-intensity class that is paired with fist-pumping, booty shaking music. The room is heated, and sweat will start to pour! Get your heart racing with a mixture of dynamic and static movements. </p>
         </div>
         <div class = 'desc'>
             <button class="accordion">Slow Burn</button>
-            <h3 class = 'title'>Slow Burn</h3>
-            <a data-fancybox='gallery' href = "./images/pigeonPose2.jpg"><img src = "./images/pigeonPose2.jpg" alt = "Person in a modified pigeon pose" class = 'd2img'></a>
+            <h2 class = 'title'>Slow Burn</h2>
+            <a data-fancybox='gallery' href = "./images/pigeonPose2.jpg" aria-label = "Person in a modified pigeon pose"><img src = "./images/pigeonPose2.jpg" alt = "Person in a modified pigeon pose" class = 'd2img'></a>
             <p class = 'panel d2desc'>This class is all about feelz. We will take you through some slower, more grounded movements. The room will still be heated, but the intensity of the class comes from you, not the heater. We challenge all students in this class to close their eyes or even blindfold themselves in order to truly experience every sensation. </p>
         </div>
         <div class = 'desc'>
             <button class="accordion">Yin</button>
-            <h3 class = 'title'>Yin</h3>
-            <a data-fancybox='gallery' href = "./images/pigeonPose.jpg"><img src = "./images/pigeonPose.jpg" alt = "Girl in pigeon pose" class = "d3img"></a>
+            <h2 class = 'title'>Yin</h2>
+            <a data-fancybox='gallery' href = "./images/pigeonPose.jpg" aria-label = "Girl in pigeon pose"><img src = "./images/pigeonPose.jpg" alt = "Girl in pigeon pose" class = "d3img"></a>
             <p class = 'panel d3desc'>This class takes it all the way down. It is filled with long-holding poses that are meant to unravel you. You will learn how to slow your breath down, and how to breath into every sensation that rises to the surface. Close your eyes, take a breath, and settle in. </p>
         </div>
         <div class = 'desc'>
             <button class="accordion">Follow the Yogi (Ashtanga)</button>
-            <h3 class = 'title'>Follow the Yogi (Ashtanga)</h3>
-            <a data-fancybox='gallery' href = "./images/seatedPose.jpg"><img src = "./images/seatedPose.jpg" alt = "Girl in seated pose" class = "d4img"></a>
+            <h2 class = 'title'>Follow the Yogi (Ashtanga)</h2>
+            <a data-fancybox='gallery' href = "./images/seatedPose.jpg" aria-label = "Girl in seated pose"><img src = "./images/seatedPose.jpg" alt = "Girl in seated pose" class = "d4img"></a>
             <p class = 'panel d4desc'>Move with one of our baller teachers as they take you through their daily Ashtanga practice! The movements will be more regimented and guided, but there will still be some personal twists thrown in there to keep you on your toes! This class is perfect for beginners who have never practiced before, for pros who want to strengthen their yoga roots, and for anyone in between!</p>
         </div>
         <div class = 'desc'>
             <button class="accordion">Yinyasa</button>
-            <h3 class = 'title'>Yinyasa</h3>
-            <a data-fancybox='gallery' href = "./images/plankPose.jpg"><img src = "./images/plankPose.jpg" alt = "person in plank" class = 'd5img'></a>
+            <h2 class = 'title'>Yinyasa</h2>
+            <a data-fancybox='gallery' href = "./images/plankPose.jpg" aria-label = "person in plank"><img src = "./images/plankPose.jpg" alt = "person in plank" class = 'd5img'></a>
             <p class= 'panel d5desc'>A perfect blend of vinyasa and yin, this class takes you through dynamic flows and long-holding postures. The fast-paced movements combined with the long-holding postures will leave you feeling like jelly in the best way possible.</p>
         </div>
     </div>
+    </main>
     <footer class="descriptionsFooter small text-center">
         <div class="container">
             Charlee Stefanski - SI 339 2018
@@ -111,7 +115,8 @@
                 if($(window).width() <= 600) {
                     $('button').show();
                     $('img').hide();
-                    $('h3').hide();
+                    $('img').addAttr
+                    $('h2').hide();
                     $('a').removeAttr('data-fancybox');
                     $('.accordion').click(function() {
                         $(this).parent(['div']).find('.panel').toggle();
@@ -119,20 +124,18 @@
                     });
                 }
                 if($(window).width() > 600) {
-                    $('button').hide();
+                    $('.accordion').hide();
                     $('p').hide();
                     $('img').show();
-                    $('h3').show();
+                    $('h2').show();
                     $('[data-fancybox="gallery"]').fancybox({
                         caption : function( instance, item ) {
-                            return $(this).parent(['div']).find('h3').text()+': ' + $(this).parent(['div']).find('p').text()
+                            return $(this).parent(['div']).find('h2').text()+': ' + $(this).parent(['div']).find('p').text()
                         }
                     }); 
                 }
             }).resize();
         });
     </script>
-
-</main>
 </body>
 </html>

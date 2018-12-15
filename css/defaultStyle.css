@@ -1,3 +1,40 @@
+#skip a { 
+    position:absolute; 
+    left:-10000px; 
+    top:auto; 
+    width:1px; 
+    height:1px; 
+    overflow:hidden;
+    color: rgb(19, 100, 69);
+} 
+
+#skip a:focus { 
+    position:static; 
+    width:auto; 
+    height:auto; 
+}
+
+@media (min-width: 1200px) {
+    #mainNav .nav-link {
+        color: rgb(255, 255, 255);
+    }
+
+    #mainNav .navbar-brand {
+        color: rgb(255,255,255);
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(19, 100, 69);
+}
+
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: .75rem;
+    color: rgb(19, 100, 69);
+    border: 1px solid rgb(19, 100, 69);
+}
+
 ul{
     list-style-type: none;
     margin: 0;
@@ -8,9 +45,12 @@ ul{
 
 li{
     display: inline;
+}
+
+li a{
     text-decoration: none;
     text-align: center;
-    color: rgb(185, 205, 212);
+    color: #FFFFFF;
     font-size: 20px;
     font-weight: semi-bold;
 }
@@ -44,7 +84,17 @@ li:visited{
     font-size: 60px;
     margin-top: 80px;
     text-align: center;
+}
 
+.titleSchedule {
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 700px) {
+    .pageTitle {
+        font-size: 40px;
+        padding: 15px;
+    }
 }
 
 .indexBody {
@@ -109,10 +159,23 @@ li:visited{
     font-size: 15px;
 }
 
+.contact-text {
+    color: rgb(0,0,0);
+}
+
+.openfloorLink {
+    color: #FFFFFF;
+    text-decoration-line: underline;
+}
+
 footer {
     padding: 2rem;
 }
 
 .scheduleFooter{
     color: #FFFFFF;
+}
+
+.contact-footer {
+    bottom: 5px;
 }

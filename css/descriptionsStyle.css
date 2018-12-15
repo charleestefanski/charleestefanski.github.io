@@ -1,7 +1,3 @@
-body {
-    background-color: rgb(255, 230, 255);
-}
-
 @media screen and (min-width: 1200px) {
     #mainNav .nav-link {
         color: rgb(19, 100, 69);
@@ -11,11 +7,6 @@ body {
         color:rgb(19, 100, 69);
         padding: 0;
     }
-}
-
-h3 {
-    color: #ffffff;
-    text-align: center;
 }
 
 p {
@@ -113,17 +104,19 @@ img {
     
     .accordion {
         color: rgb(19, 100, 69);
+        font-size: 1rem;
+        font-weight: bold;
         cursor: pointer;
         padding: 18px;
         width: 100%;
         text-align: left;
         border: none;
-        outline: none;
+        outline: 1px solid rgb(128, 128, 128);
         transition: 0.4s;
     }
 
     button {
-        background-color: #ffffff;
+        background-color: rgb(255, 230, 255, .5);
         font-family: "Courier New", Arial;
     }
 

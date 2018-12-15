@@ -9,9 +9,27 @@
     }
 }
 
+.instagram {
+    margin: auto;
+    text-align: center;
+}
+
+.fa-instagram {
+    font-size: 60px;
+    color: rgb(19, 100, 69);
+    padding: 10px;
+}
+
+.instagramText {
+    font-family: "Courier New", Arial;
+    font-size: 1.1rem;
+    color: rgb(19, 100, 69);
+}
+
 p {
     font-family: "Courier New", Arial;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 footer{
@@ -22,6 +40,14 @@ footer{
     .contactBody {
         background-image: url('/images/daisy.jpg');
         background-repeat: no-repeat;
+    }
+
+    .pageTtile {
+        margin-bottom: 10%;
+    }
+
+    .instagram {
+        margin-top: 40%;
     }
 }
 
