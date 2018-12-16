@@ -48,6 +48,10 @@ p {
     font-size: 1.1rem;
 }
 
+.openfloorLink {
+    color: rgb(19, 100, 69);
+}
+
 footer{
     color: rgb(19, 100, 69);
 }
@@ -67,7 +71,7 @@ footer{
     }
 
     .icon {
-        font-size: 30pt;
+        font-size: 20pt;
     }
 }
 

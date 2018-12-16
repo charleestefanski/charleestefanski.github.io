@@ -1,20 +1,24 @@
 #skip a { 
-    position:absolute; 
+    position: absolute;; 
     left:-10000px; 
     top:auto; 
     width:1px; 
     height:1px; 
     overflow:hidden;
     color: rgb(19, 100, 69);
+    z-index: 2000;
+    background-color: #FFFFFF;
 } 
 
 #skip a:focus { 
-    position:static; 
+    position: static;
+    float:left;
     width:auto; 
     height:auto; 
+    z-index: 2000;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     #mainNav .nav-link {
         color: rgb(255, 255, 255);
     }

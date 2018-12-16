@@ -110,13 +110,13 @@ img {
         padding: 18px;
         width: 100%;
         text-align: left;
-        border: none;
-        outline: 1px solid rgb(128, 128, 128);
+        border: 1px solid rgb(128, 128, 128);
+        outline: none;
         transition: 0.4s;
     }
 
     button {
-        background-color: rgb(255, 230, 255, .5);
+        background-color: rgb(255, 209, 26);
         font-family: "Courier New", Arial;
     }
 
