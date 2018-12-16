@@ -76,7 +76,8 @@ li:visited{
 .mainHeader{
     font-family: 'Crimson Text', serif;
     text-align: center;
-    color: rgb(19, 100, 69);
+    color: 
+    rgb(179, 230, 179);
 }
 
 .pageTitle {
@@ -143,13 +144,6 @@ li:visited{
     width: 50%;
 }
 
-#scheduleImg{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 90%;
-}
-
 .scheduleBody {
     background-color: #043C4E;
 }
@@ -182,4 +176,11 @@ footer {
 
 .contact-footer {
     bottom: 5px;
+}
+
+.googleCal {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 90%;
 }
